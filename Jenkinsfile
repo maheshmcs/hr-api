@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages{
-        echo "${params}"
          stage('git checkout') {
             steps {
+                echo "${params}"
                 git url: 'https://github.com/maheshmcs/hr-api', branch: 'main'
             }
         }
