@@ -3,9 +3,8 @@ pipeline {
 
     stages{
          stage('git checkout') {
-            steps {
-                echo "${params.BranchName}"
-                git url: 'https://github.com/maheshmcs/hr-api', branch: 'main'
+             steps {
+                git url: 'https://github.com/maheshmcs/hr-api', branch: "${params.BranchName}"
             }
         }
         stage('maven build') {
