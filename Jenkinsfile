@@ -1,4 +1,4 @@
-currentBuild.displayname="mahesh#${currentBuild.number}"
+currentBuild.displayName="mahesh#${currentBuild.number}"
 pipeline {
     agent any
 
