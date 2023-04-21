@@ -24,6 +24,11 @@ pipeline {
             }
         }
         stage('tomcat deploy-dev') {
+            when{
+            expression{
+            params.BranchName=="develop"
+            }
+        }
             steps {
                 sshagent(['tomcat-dev']) {
                     sh 'scp -o StrictHostKeyChecking=no target/hr-api.war ec2-user@172.31.46.54:/opt/tomcat9/webapps/'
