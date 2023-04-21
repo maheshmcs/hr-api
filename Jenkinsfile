@@ -4,7 +4,7 @@ pipeline {
     stages{
          stage('git checkout') {
             steps {
-                echo "${params}"
+                echo "${params.BranchName}"
                 git url: 'https://github.com/maheshmcs/hr-api', branch: 'main'
             }
         }
