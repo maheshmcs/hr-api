@@ -1,12 +1,6 @@
 pipeline {
     agent any
 
-    stages {
-        stage('git checkout') {
-            steps {
-                git url:'https://github.com/maheshmcs/hr-api.git', branch: 'main'
-            }
-        }
         stage('maven build') {
             steps {
                 sh 'mvn clean package'
