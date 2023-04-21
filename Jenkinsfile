@@ -1,3 +1,4 @@
+currentbuild.displayname="mahesh#${currentbuild.number}"
 pipeline {
     agent any
 
