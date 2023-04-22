@@ -25,9 +25,9 @@ pipeline {
             }
         }
     }
-         post {
-            always {
-              cleanWs()
+        post {
+            success {
+            build 'jenkins-global-env'
         }
     }
 }
