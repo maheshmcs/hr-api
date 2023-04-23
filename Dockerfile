@@ -1,5 +1,5 @@
 FROM alpine:3.17
-LABEL AUTHOR="Java Home"
+LABEL AUTHOR="Mahesh kumar"
 RUN apk add openjdk17-jre
 WORKDIR /opt
 ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.73/bin/apache-tomcat-9.0.73.tar.gz .
